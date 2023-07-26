@@ -122,6 +122,7 @@ USE_TZ = True
 #STATICFILES_FINDERS = ('compressor.finders.CompressorFinder',)
 
 STATIC_URL = 'static/'
+
 STATICFILES_DIRS = [
     BASE_DIR / 'static/'
 ]

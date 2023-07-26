@@ -1,3 +1,24 @@
 body {
     background: #0e0e1b;
 }
+
+.russell-header {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("//cdn-ssl.s7.disneystore.com/is/image/ShopDisney/mb_character-russell_launch_2x?fit=constrain&cropN=0,0,1,1&fmt=jpeg&qlt=90&wid=1200");
+}
+.bg-rainbow {
+    height: 100%;
+    background-image: url("../images/rainbow_fade.png");
+    background-size: contain;
+}
+.rainbow-bar {
+    background: #ffffff1a;
+}
+.red-turn:hover  .rainbow-bar {
+    background: red;
+}
+
+.v-escotismo h2 {
+    text-shadow: 0, 0, 10rem green;
+}

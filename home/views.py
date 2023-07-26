@@ -5,4 +5,7 @@ from django.template import loader
 # Create your views here.
 def index(request):
 
-    return render(request, "shared/_base_index.html")
+    return render(request, "index.html")
+
+def content(request):
+    return render(request, "_content.html")
