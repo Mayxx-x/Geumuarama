@@ -3,7 +3,6 @@ var t_views = [$(".m-escotismo"), $(".m-about"), $(".m-ramos")];
 var views = [$(".v-escotismo"), $(".v-about"), $(".v-ramos"), $(".v-fotos"), $(".v-infos"), $(".v-downloads")];
 
 $(".m-escotismo").on("click", function(e) {
-    
     views.forEach(view => view.hide());
 
     $(".v-escotismo").show();

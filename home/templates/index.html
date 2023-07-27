@@ -1,4 +1,5 @@
 {% extends "shared/_base_index.html" %}
+{% load static %}
 
 {% block title %}
 Home
@@ -7,116 +8,53 @@ Home
 {% block content %}
 <nav class="rainbow-nav mt-1 mb-4 w-full shadow-2xl rounded-md">
     <div class="flex flex-nowrap overflow-x-auto text-white max-w-screen-lg mx-auto">
-        <button class="m-escotismo p-4 border-b-red-500 border-b-4 hover:bg-red-500 hover:text-[#fff0f0] shadow-2xl hover:shadow-red-500 transition duration-200 rounded-lg"> 
+        <a href="/" class="m-escotismo p-4 border-b-red-500 border-b-4 hover:bg-red-500 hover:text-[#fff0f0] shadow-2xl hover:shadow-red-500 transition duration-200 rounded-lg hover:cursor-pointer"> 
             Escotismo 
-        </button>
-        <button class="m-about p-4 border-b-orange-500 border-b-4 hover:bg-orange-500 transition duration-200 rounded-lg shadow-2xl hover:shadow-orange-500"> 
+        </a>
+        <a href="/" class="m-about p-4 border-b-orange-500 border-b-4 hover:bg-orange-500 transition duration-200 rounded-lg shadow-2xl hover:shadow-orange-500 hover:cursor-pointer"> 
             Quem Somos 
-        </button>
-        <button class="m-ramos p-4 border-b-yellow-500 border-b-4 hover:bg-yellow-500 transition duration-200 rounded-lg shadow-2xl hover:shadow-yellow-500"> 
+        </a>
+        <a href="/" class="m-ramos p-4 border-b-yellow-500 border-b-4 hover:bg-yellow-500 transition duration-200 rounded-lg shadow-2xl hover:shadow-yellow-500 hover:cursor-pointer"> 
             Ramos
-        </button>
-        <button class="m-fotos p-4 border-b-green-500 border-b-4 hover:bg-green-500 transition duration-200 rounded-lg shadow-2xl hover:shadow-green-500"> 
+        </a>
+        <a href="/" class="m-fotos p-4 border-b-green-500 border-b-4 hover:bg-green-500 transition duration-200 rounded-lg shadow-2xl hover:shadow-green-500 hover:cursor-pointer"> 
             Fotos
-        </button>
-        <button class="m-infos p-4 border-b-blue-200 border-b-4 hover:bg-blue-200 hover:text-[#245c87] transition duration-200 rounded-lg shadow-2xl hover:shadow-blue-200"> 
+        </a>
+        <a href="/" class="m-infos p-4 border-b-blue-200 border-b-4 hover:bg-blue-200 hover:text-[#245c87] transition duration-200 rounded-lg shadow-2xl hover:shadow-blue-200 hover:cursor-pointer"> 
             Noticias e Informaçoes
-        </button>
-        <button class="m-downloads p-4 border-b-blue-500 border-b-4 hover:bg-blue-500 hover:text-[#e8faff] transition duration-200 rounded-lg shadow-2xl hover:shadow-blue-500"> 
+        </a>
+        <a href="/" class="m-downloads p-4 border-b-blue-500 border-b-4 hover:bg-blue-500 hover:text-[#e8faff] transition duration-200 rounded-lg shadow-2xl hover:shadow-blue-500 hover:cursor-pointer"> 
             Downloads
-        </button>
-        
+        </a>
     </div>
 </nav>
 
-<section class="content-container mt-10 shadow-2xl shadow-black h-fit rounded-lg">
+<section class="content-container mt-10 shadow-2xl shadow-black h-fit rounded-2xl">
+    
+    <!-- Home Screen -->
     <article class="home w-full h-full">
         <h1 class="text-3xl text-white p-4 w-full text-center"> Home </h1>
 
-        <header class="w-full flex">
-            <div class="w-max">
-                <img class="w-sm h-50" src="static/images/logo.png" alt="">
-            </div>
-            <div class="w-max bg-gray-900">
-                
+        <header class="w-full">
+            <div class="xl:p-9 flex">
+                <div class="w-max xl:basis-1/4">
+                    <img class="w-sm h-50 shadow-blue-200 drop-shadow-2xl" src=" {% static '/images/logo.png' %}" alt="">
+                </div>
+
+                <div class="w-max xl:basis-3/4">
+                    <div class="content-view bg-[#bbb4] shadow-[inset_0_-2px_2rem_rgba(0,0,0,0.6)] rounded-2xl w-full h-full">
+
+                        <!-- Conteudos separados em Articles -->
+                        {% block escotismo %}
+                        {% endblock %}
+                    </div>
+                </div>
             </div>
 
         </header>
     </article>
-    <div class="content-view w-full h-full">
 
-        <!-- Conteudos separados em Articles -->
-        <article class="v-escotismo hidden">
-
-            <div class="p-4 text-white w-full xl:text-xl sm:text-sm">
-                <!-- Informacoes ordenadas por relevancia -->
-                <h2 class="text-3xl text-center p-4 text-white drop-shadow-2xl"> Escotismo em Umuarama </h2>
-
-                <div class="shadow-xl rounded-lg p-4 bg-orange-500">
-                    <br>
-                    <p>
-                        &emsp; Em Umuarama, o escotismo chegou em 1947, através de um grupo de jovens que foram influenciados pelo escotismo em outras cidades do Paraná. O primeiro grupo escoteiro de Umuarama foi fundado em 1948, e desde então o movimento tem crescido e se consolidado na cidade.
-                    </p>
-                    <br>
-                    <p>
-                        &emsp; O escotismo é uma atividade muito importante para o Brasil. O movimento tem desempenhado um papel importante na educação de jovens brasileiros, e é uma atividade aberta a jovens de todas as classes sociais. O escotismo é um movimento que ensina os jovens a serem cidadãos ativos, responsáveis e comprometidos com a comunidade.
-                    </p>
-                    <br>
-                </div>
-
-                <h2 class="text-2xl text-center p-4 text-green-500 drop-shadow-2xl"> Escotismo no Brasil </h2>
-                
-                <div class="shadow-xl rounded-lg p-4 bg-orange-500">
-                    <br>
-                    <p>
-                        &emsp; O escotismo chegou ao Brasil em 1910, através de oficiais da Marinha do Brasil que haviam visitado a Inglaterra e ficaram impressionados com o movimento. O primeiro grupo escoteiro brasileiro foi fundado em São Paulo, em 1912. No ano seguinte, foi fundada a Associação Brasileira de Escoteiros
-                    </p>
-                    <br>
-                    <p>
-                        &emsp; O escotismo em Umuarama é uma atividade muito importante para a comunidade. Os escoteiros da cidade participam de diversas atividades, como acampamentos, trilhas, jogos e projetos sociais. O escotismo ajuda os jovens de Umuarama a desenvolverem suas habilidades físicas, sociais e emocionais, e também a se tornarem cidadãos ativos e responsáveis.
-                    </p>
-                    <br>
-                    <p>
-                        &emsp; O escotismo cresceu rapidamente no Brasil e, em 1920, já havia mais de 10 mil escoteiros no país. Em 1922, a ABE foi admitida na Organização Mundial do Movimento Escoteiro (OMME).
-                    </p>
-                    <br>
-                    <p>
-                        &emsp; O escotismo tem desempenhado um papel importante na educação de jovens brasileiros. O movimento ensina os jovens a serem cidadãos ativos, responsáveis e comprometidos com a comunidade. O escotismo também ajuda os jovens a desenvolverem suas habilidades físicas, sociais e emocionais.
-                    </p>
-                    <br>
-                    <p>
-                        &emsp; O escotismo é uma atividade muito popular no Brasil. Hoje, existem mais de 200 mil escoteiros no país, divididos em mais de 2 mil grupos. O escotismo está presente em todas as regiões do Brasil, e é uma atividade aberta a jovens de todas as classes sociais.
-                    </p>
-                    <br>
-                </div>
-            </div>
-        </article>
-
-        <article class="v-about hidden p-4 h-full">
-            <h2 class="text-3xl text-center w-full p-4 text-white drop-shadow-2xl"> Quem Somos </h2>
-
-            <div class="text-center my-40">
-                [ Adicionar Conteudo ]
-            </div>
-        </article>
-
-        <article class="v-ramos hidden">
-            <h2>roles</h2>
-        </article>
-
-        <article class="v-fotos hidden">
-            <h2>fotos</h2>
-            <img src="" alt="">
-        </article>
-
-        <article class="v-infos hidden">
-            <h2> Noticias e Informaçoes </h2>
-        </article>
-
-        <article class="v-downloads hidden">
-            <h2>downloads</h2>
-        </article>
-    </div>
+    
 
 </section>
 {% endblock %}

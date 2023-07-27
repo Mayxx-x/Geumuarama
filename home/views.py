@@ -9,3 +9,6 @@ def index(request):
 
 def content(request):
     return render(request, "_content.html")
+
+def contato(request):
+    return render(request, "_contact.html")

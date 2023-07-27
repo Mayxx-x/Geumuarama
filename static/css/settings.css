@@ -7,12 +7,10 @@ body {
     /* background-image: url("//cdn-ssl.s7.disneystore.com/is/image/ShopDisney/mb_character-russell_launch_2x?fit=constrain&cropN=0,0,1,1&fmt=jpeg&qlt=90&wid=1200"); */
 }
 .bg-rainbow {
-    background-image: url("../images/rainbow_fade.png");
+    /* background-image: url("../images/rainbow_fade.png"); */
+    background: #3FA5F5;
     background-size: contain;
 }
 .rainbow-bar {
     background: #ffffff1a;
-}
-.red-turn:hover  .rainbow-bar {
-    background: red;
 }
