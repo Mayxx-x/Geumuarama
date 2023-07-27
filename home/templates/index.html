@@ -8,23 +8,56 @@ Home
 {% block content %}
 <nav class="rainbow-nav mt-1 mb-4 w-full shadow-2xl rounded-md">
     <div class="flex flex-nowrap overflow-x-auto text-white max-w-screen-lg mx-auto">
-        <a href="/" class="m-escotismo p-4 border-b-red-500 border-b-4 hover:bg-red-500 hover:text-[#fff0f0] shadow-2xl hover:shadow-red-500 transition duration-200 rounded-lg hover:cursor-pointer"> 
-            Escotismo 
+        <a href="../escotismo" class="m-escotismo flex items-center p-2 border-b-red-500 border-b-4 hover:bg-red-500 hover:text-[escotismo/fff0f0] shadow-2xl hover:shadow-red-500 transition duration-200 rounded-lg hover:cursor-pointer"> 
+            <span class="p-2 basis-1/3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-signpost-split" viewBox="0 0 16 16">
+                    <path d="M7 7V1.414a1 1 0 0 1 2 0V2h5a1 1 0 0 1 .8.4l.975 1.3a.5.5 0 0 1 0 .6L14.8 5.6a1 1 0 0 1-.8.4H9v10H7v-5H2a1 1 0 0 1-.8-.4L.225 9.3a.5.5 0 0 1 0-.6L1.2 7.4A1 1 0 0 1 2 7h5zm1 3V8H2l-.75 1L2 10h6zm0-5h6l.75-1L14 3H8v2z"/>
+                </svg>
+            </span>
+            <span class="p-2 whitespace-nowrap basis-2/3"> Escotismo </span>
         </a>
-        <a href="/" class="m-about p-4 border-b-orange-500 border-b-4 hover:bg-orange-500 transition duration-200 rounded-lg shadow-2xl hover:shadow-orange-500 hover:cursor-pointer"> 
-            Quem Somos 
+        <a href="../sobre" class="m-about flex items-center p-2 border-b-orange-500 border-b-4 hover:bg-orange-500 transition duration-200 rounded-lg shadow-2xl hover:shadow-orange-500 hover:cursor-pointer"> 
+            <span class="p-2 basis-1/3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-file-earmark-person-fill" viewBox="0 0 16 16">
+                    <path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0zM9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1zM11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0zm2 5.755V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-.245S4 12 8 12s5 1.755 5 1.755z"/>
+                </svg>
+            </span>
+            <span class="p-2 whitespace-nowrap basis-2/3"> Quem Somos </span>
         </a>
-        <a href="/" class="m-ramos p-4 border-b-yellow-500 border-b-4 hover:bg-yellow-500 transition duration-200 rounded-lg shadow-2xl hover:shadow-yellow-500 hover:cursor-pointer"> 
-            Ramos
+        <a href="../ramos" class="m-ramos flex items-center p-2 border-b-yellow-500 border-b-4 hover:bg-yellow-500 transition duration-200 rounded-lg shadow-2xl hover:shadow-yellow-500 hover:cursor-pointer"> 
+            <span class="p-2 basis-1/3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-tree" viewBox="0 0 16 16">
+                    <path d="M8.416.223a.5.5 0 0 0-.832 0l-3 4.5A.5.5 0 0 0 5 5.5h.098L3.076 8.735A.5.5 0 0 0 3.5 9.5h.191l-1.638 3.276a.5.5 0 0 0 .447.724H7V16h2v-2.5h4.5a.5.5 0 0 0 .447-.724L12.31 9.5h.191a.5.5 0 0 0 .424-.765L10.902 5.5H11a.5.5 0 0 0 .416-.777l-3-4.5zM6.437 4.758A.5.5 0 0 0 6 4.5h-.066L8 1.401 10.066 4.5H10a.5.5 0 0 0-.424.765L11.598 8.5H11.5a.5.5 0 0 0-.447.724L12.69 12.5H3.309l1.638-3.276A.5.5 0 0 0 4.5 8.5h-.098l2.022-3.235a.5.5 0 0 0 .013-.507z"/>
+                </svg>
+            </span>
+            <span class="p-2 whitespace-nowrap basis-2/3"> Ramos </span>
         </a>
-        <a href="/" class="m-fotos p-4 border-b-green-500 border-b-4 hover:bg-green-500 transition duration-200 rounded-lg shadow-2xl hover:shadow-green-500 hover:cursor-pointer"> 
-            Fotos
+        <a href="../fotos" class="m-fotos flex items-center p-2 border-b-green-500 border-b-4 hover:bg-green-500 transition duration-200 rounded-lg shadow-2xl hover:shadow-green-500 hover:cursor-pointer"> 
+            <span class="p-2 whitespace-nowrap basis-1/3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person-bounding-box" viewBox="0 0 16 16">
+                    <path d="M1.5 1a.5.5 0 0 0-.5.5v3a.5.5 0 0 1-1 0v-3A1.5 1.5 0 0 1 1.5 0h3a.5.5 0 0 1 0 1h-3zM11 .5a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 1 16 1.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 1-.5-.5zM.5 11a.5.5 0 0 1 .5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 1 0 1h-3A1.5 1.5 0 0 1 0 14.5v-3a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v3a1.5 1.5 0 0 1-1.5 1.5h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 1 .5-.5z"/>
+                    <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm8-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                </svg>
+            </span>
+            <span class="p-2 whitespace-nowrap basis-2/3"> Fotos </span>
         </a>
-        <a href="/" class="m-infos p-4 border-b-blue-200 border-b-4 hover:bg-blue-200 hover:text-[#245c87] transition duration-200 rounded-lg shadow-2xl hover:shadow-blue-200 hover:cursor-pointer"> 
-            Noticias e Informaçoes
+        <a href="../infos" class="m-infos flex items-center p-2 border-b-blue-200 border-b-4 hover:bg-blue-200 hover:text-[escotismo/245c87] transition duration-200 rounded-lg shadow-2xl hover:shadow-blue-200 hover:cursor-pointer"> 
+            <span class="p-2 basis-1/3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-newspaper" viewBox="0 0 16 16">
+                    <path d="M0 2.5A1.5 1.5 0 0 1 1.5 1h11A1.5 1.5 0 0 1 14 2.5v10.528c0 .3-.05.654-.238.972h.738a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 1 1 0v9a1.5 1.5 0 0 1-1.5 1.5H1.497A1.497 1.497 0 0 1 0 13.5v-11zM12 14c.37 0 .654-.211.853-.441.092-.106.147-.279.147-.531V2.5a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0-.5.5v11c0 .278.223.5.497.5H12z"/>
+                    <path d="M2 3h10v2H2V3zm0 3h4v3H2V6zm0 4h4v1H2v-1zm0 2h4v1H2v-1zm5-6h2v1H7V6zm3 0h2v1h-2V6zM7 8h2v1H7V8zm3 0h2v1h-2V8zm-3 2h2v1H7v-1zm3 0h2v1h-2v-1zm-3 2h2v1H7v-1zm3 0h2v1h-2v-1z"/>
+                </svg>
+            </span>
+            <span class="p-2 whitespace-nowrap basis-2/3"> Noticias e Informaçoes </span>
         </a>
-        <a href="/" class="m-downloads p-4 border-b-blue-500 border-b-4 hover:bg-blue-500 hover:text-[#e8faff] transition duration-200 rounded-lg shadow-2xl hover:shadow-blue-500 hover:cursor-pointer"> 
-            Downloads
+        <a href="../downloads" class="m-downloads flex items-center p-2 border-b-blue-500 border-b-4 hover:bg-blue-500 hover:text-[escotismo/e8faff] transition duration-200 rounded-lg shadow-2xl hover:shadow-blue-500 hover:cursor-pointer"> 
+            <span class="p-2 basis-1/3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+                    <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+                    <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+                </svg>
+            </span>
+            <span class="p-2 whitespace-nowrap basis-2/3"> Downloads </span>
         </a>
     </div>
 </nav>
@@ -36,17 +69,34 @@ Home
         <h1 class="text-3xl text-white p-4 w-full text-center"> Home </h1>
 
         <header class="w-full">
-            <div class="xl:p-9 flex">
-                <div class="w-max xl:basis-1/4">
+            <div class="xl:p-9 flex gap-6">
+                <div class="w-max xl:basis-1/4"> 
                     <img class="w-sm h-50 shadow-blue-200 drop-shadow-2xl" src=" {% static '/images/logo.png' %}" alt="">
                 </div>
 
                 <div class="w-max xl:basis-3/4">
-                    <div class="content-view bg-[#bbb4] shadow-[inset_0_-2px_2rem_rgba(0,0,0,0.6)] rounded-2xl w-full h-full">
+                    <div class="content-view bg-[escotismo/bbb4] shadow-[inset_0_-2px_2rem_rgba(0,0,0,0.6)] rounded-2xl w-full h-full">
 
                         <!-- Conteudos separados em Articles -->
                         {% block escotismo %}
                         {% endblock %}
+
+                        {% block about %}
+                        {% endblock %}
+
+                        {% block roles %}
+                        {% endblock %}
+
+                        {% block fotos %}
+                        {% endblock %}
+
+                        {% block infos %}
+                        {% endblock %}
+
+                        {% block downloads %}
+                        {% endblock %}
+
+
                     </div>
                 </div>
             </div>

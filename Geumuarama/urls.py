@@ -21,6 +21,11 @@ from home import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index),
-    path('escotismo/', views.content),
+    path('escotismo/', views.escotismo),
+    path('sobre/', views.about),
+    path('ramos/', views.roles),
+    path('fotos/', views.photos),
+    path('infos/', views.infos),
+    path('downloads/', views.downloads),
     path('contato/', views.contato)
 ]
