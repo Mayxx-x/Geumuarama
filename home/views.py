@@ -4,25 +4,49 @@ from django.template import loader
 
 # Create your views here.
 def index(request):
-    return render(request, "index.html")
+    return render(request, "_content/_home.html")
+
+def faq(request):
+    return render(request, "_content/_faq.html")
 
 def escotismo(request):
-    return render(request, "_content/_escotismo.html")
+    context = {
+        'active': 'escotismo'
+    }
+    return render(request, "_content/_escotismo.html", context)
 
 def about(request):
-    return render(request, "_content/_about.html")
+    context = {
+        'active': 'about'
+    }
+    return render(request, "_content/_about.html", context)
 
 def roles(request):
-    return render(request, "_content/_roles.html")
+    context = {
+        'active': 'roles'
+    }
+    return render(request, "_content/_roles.html", context)
 
 def photos(request):
-    return render(request, "_content/_fotos.html")
+    context = {
+        'active': 'photos'
+    }
+    return render(request, "_content/_fotos.html", context)
 
 def infos(request):
-    return render(request, "_content/_infos.html")
+    context = {
+        'active': 'infos'
+    }
+    return render(request, "_content/_infos.html", context)
 
 def downloads(request):
-    return render(request, "_content/_downloads.html")
+    context = {
+        'active': 'downloads'
+    }
+    return render(request, "_content/_downloads.html", context)
 
 def contato(request):
-    return render(request, "_content/_contact.html")
+    context = {
+        'active': 'contato'
+    }
+    return render(request, "_content/_contact.html", context)
