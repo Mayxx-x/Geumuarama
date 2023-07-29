@@ -104,7 +104,7 @@ Home
     <div class="flex flex-nowrap overflow-x-auto text-white max-w-screen-lg mx-auto">
 
         {% if active == 'escotismo' %}
-        <a href="../escotismo" class="m-escotismo flex basis-1/6 items-center p-2 bg-red-500 shadow-2xl transition duration-200 rounded-t-xl shadow-2xl shadow-black"> 
+        <a href="../escotismo" class="m-escotismo flex basis-1/6 items-center p-2 bg-red-500 shadow-2xl transition duration-200 rounded-tr-xl shadow-2xl shadow-black"> 
             <span class="p-2">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-signpost-split" viewBox="0 0 16 16">
                     <path d="M7 7V1.414a1 1 0 0 1 2 0V2h5a1 1 0 0 1 .8.4l.975 1.3a.5.5 0 0 1 0 .6L14.8 5.6a1 1 0 0 1-.8.4H9v10H7v-5H2a1 1 0 0 1-.8-.4L.225 9.3a.5.5 0 0 1 0-.6L1.2 7.4A1 1 0 0 1 2 7h5zm1 3V8H2l-.75 1L2 10h6zm0-5h6l.75-1L14 3H8v2z"/>
@@ -183,7 +183,7 @@ Home
         {% endif %}
 
         {% if active == 'infos' %}
-        <a href="../infos" class="m-infos flex basis-1/6 items-center p-2 border-b-blue-200 border-b-4 hover:bg-blue-200 hover:text-[#245c87] transition duration-200 rounded-lg shadow-2xl hover:shadow-blue-200 hover:cursor-pointer"> 
+        <a href="../infos" class="m-infos flex basis-1/6 items-center p-2 bg-blue-200 text-[#245c87] transition duration-200 rounded-t-xl shadow-2xl shadow-blue-200">
             <span class="p-2">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-newspaper" viewBox="0 0 16 16">
                     <path d="M0 2.5A1.5 1.5 0 0 1 1.5 1h11A1.5 1.5 0 0 1 14 2.5v10.528c0 .3-.05.654-.238.972h.738a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 1 1 0v9a1.5 1.5 0 0 1-1.5 1.5H1.497A1.497 1.497 0 0 1 0 13.5v-11zM12 14c.37 0 .654-.211.853-.441.092-.106.147-.279.147-.531V2.5a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0-.5.5v11c0 .278.223.5.497.5H12z"/>
@@ -193,7 +193,7 @@ Home
             <span class="whitespace-nowrap"> Noticias e Informaçoes </span>
         </a>
         {% else %}
-        <a href="../infos" class="m-infos flex basis-1/6 items-center p-2 hover:bg-blue-200 text-[#245c87] transition duration-200 rounded-t-xl shadow-2xl shadow-blue-200"> 
+        <a href="../infos" class="m-infos flex basis-1/6 items-center p-2 border-b-blue-200 border-b-4 hover:bg-blue-200 hover:text-[#245c87] transition duration-200 rounded-lg shadow-2xl hover:shadow-blue-200 hover:cursor-pointer"> 
             <span class="p-2">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-newspaper" viewBox="0 0 16 16">
                     <path d="M0 2.5A1.5 1.5 0 0 1 1.5 1h11A1.5 1.5 0 0 1 14 2.5v10.528c0 .3-.05.654-.238.972h.738a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 1 1 0v9a1.5 1.5 0 0 1-1.5 1.5H1.497A1.497 1.497 0 0 1 0 13.5v-11zM12 14c.37 0 .654-.211.853-.441.092-.106.147-.279.147-.531V2.5a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0-.5.5v11c0 .278.223.5.497.5H12z"/>
@@ -203,24 +203,24 @@ Home
         </a>
         {% endif %}
 
-        {% if active == 'about' %}
-        <a href="../downloads" class="m-downloads flex basis-1/6 items-center p-2 border-b-blue-500 border-b-4 hover:bg-blue-500 hover:text-[#e8faff] transition duration-200 rounded-lg shadow-2xl hover:shadow-blue-500 hover:cursor-pointer"> 
+        {% if active == 'downloads' %}
+        <a href="../downloads" class="m-downloads flex basis-1/6 items-center p-2 border-b-blue-500 border-b-4 bg-blue-500 hover:text-[#e8faff] transition duration-200 rounded-lg shadow-2xl hover:shadow-blue-500 hover:cursor-pointer"> 
             <span class="p-2">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
                     <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
                     <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
                 </svg>
             </span>
+            <span class="whitespace-nowrap basis-2/3"> Downloads </span>
         </a>
         {% else %}
-        <a href="../downloads" class="m-downloads flex basis-1/6 items-center p-2 border-b-blue-500 border-b-4 hover:bg-blue-500 hover:text-[#e8faff] transition duration-200 rounded-lg shadow-2xl hover:shadow-blue-500 hover:cursor-pointer"> 
+        <a href="../downloads" class="m-downloads flex basis-1/6 items-center p-2 border-b-blue-500 border-b-4 hover:bg-blue-500 hover:text-[#e8faff] transition duration-200 rounded-lg shadow-2xl hover:shadow-blue-500 hover:cursor-pointer">
             <span class="p-2">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
                     <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
                     <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
                 </svg>
             </span>
-            <span class="whitespace-nowrap hidden basis-2/3"> Downloads </span>
         </a>
         {% endif %}
     </div>
