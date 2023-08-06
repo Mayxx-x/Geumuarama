@@ -14,3 +14,8 @@ body {
 .rainbow-bar {
     background: #ffffff1a;
 }
+#scout {
+    background-image: url("../images/scout.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}

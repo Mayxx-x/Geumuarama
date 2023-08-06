@@ -2,7 +2,12 @@
 {% load static %}
 
 {% block home %}
-    <div class="w-full p-4 xl:basis-1/4">
-        
+    <div id="scout" class="w-full flex gap-8 max-xl:p-2 xl:p-4 xl:shadow-[inset_0_-2px_2rem_rgba(0,0,0,0.6)] xl:basis-1/4 rounded-xl">
+        <div class="basis-1/3">
+            <img class="shadow-red-500 drop-shadow-2xl" src="{% static 'images/logo.png' %}" alt="" srcset="">
+        </div>
+        <div class="shadow-2xl max-xl:p-2 xl:p-8 backdrop-blur-sm shadow-black shadow-[0 0 40px #000] bg-gradient-to-r from-transparency to-blue-300 rounded-xl basis-2/3">
+            <h2 class="text-white text-center max-xl:text-xl xl:text-5xl"> Grupo Escoteiro de Umuarama </h2>
+        </div>
     </div>
 {% endblock %}
