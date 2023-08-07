@@ -4,7 +4,7 @@
 
 <!-- Modal toggle -->
 <button data-modal-target="staticModal" data-modal-toggle="staticModal"
-    class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+    class="hidden text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
     type="button">
     Toggle modal
 </button>
@@ -17,26 +17,7 @@
         <div id="default-carousel" class="relative w-full" data-carousel="slide">
             <!-- Carousel wrapper -->
             <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
-                 <!-- Item 1 -->
-                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="/docs/images/carousel/carousel-1.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-                </div>
-                <!-- Item 2 -->
-                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="/docs/images/carousel/carousel-2.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-                </div>
-                <!-- Item 3 -->
-                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="/docs/images/carousel/carousel-3.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-                </div>
-                <!-- Item 4 -->
-                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="/docs/images/carousel/carousel-4.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-                </div>
-                <!-- Item 5 -->
-                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="/docs/images/carousel/carousel-5.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-                </div>
+                <!-- Imagens -->
             </div>
             <!-- Slider indicators -->
             <div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2">
@@ -69,17 +50,40 @@
 
 <article class="v-fotos justify-center p-4">
     <h2 class="text-white text-4xl text-center"> Fotos </h2>
-    <div class="painel w-full">
 
-    </div>
-    <div class="controls w-full">
-        <select name="" id="">
-            <option value=""></option>
-            <option value=""></option>
-            <option value=""></option>
-            <option value=""></option>
-            <option value=""></option>
-        </select>
-    </div>
+    <section class="shadow-xl mt-5 flex painel h-fit w-full h-56 rounded-2xl">
+        <div class="quadro hidden max-sm:hidden grow h-full w-64">
+            <figure id="gallery-placeholder" class="w-full mt-10">
+                <div class="mx-auto">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" fill="currentColor" class="bi bi-images p-4 rounded-xl shadow-xl mx-auto text-white" viewBox="0 0 16 16">
+                        <path d="M4.502 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+                        <path d="M14.002 13a2 2 0 0 1-2 2h-10a2 2 0 0 1-2-2V5A2 2 0 0 1 2 3a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v8a2 2 0 0 1-1.998 2zM14 2H4a1 1 0 0 0-1 1h9.002a2 2 0 0 1 2 2v7A1 1 0 0 0 15 11V3a1 1 0 0 0-1-1zM2.002 4a1 1 0 0 0-1 1v8l2.646-2.354a.5.5 0 0 1 .63-.062l2.66 1.773 3.71-3.71a.5.5 0 0 1 .577-.094l1.777 1.947V5a1 1 0 0 0-1-1h-10z"/>
+                    </svg>
+                </div>
+            </figure>
+        </div>
+        <div id="galleries" class="sm:w-full shadow-[inset_0_0_1rem_rgba(0,0,0,0.6)] max-sm:grow rounded-lg">
+            <select id="selector" class="text-black text-center p-2 w-full rounded-lg shadow-lg" name="">
+                <optgroup class="" label="Ramos">
+                    {% for index in gallery_index %}
+                    <option value="{{index}}"> {{index}} </option>
+                    {% endfor %}
+                </optgroup>
+            </select>
+
+            <div id="mini-gallery" class="h-fit overflow-x-auto">
+
+                {% for gallery, images in gallery_index.items %}
+                <article id="{{ gallery }}" class="container gallery hidden flex p-2 snap-mandatory snap-x w-fit content-evenly gap-4">
+                    {% for image in images %}
+                    <div class="shadow-black cursor-pointer snap-center w-full">
+                        <img class="object-cover shadow-lg rounded-xl" src="/static/gallery/{{gallery}}/{{image}}" alt="">
+                    </div>
+                    {% endfor %}
+                </article>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
 </article>
 {% endblock %}

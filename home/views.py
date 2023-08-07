@@ -1,4 +1,5 @@
 import os
+from pathlib import Path
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
@@ -29,8 +30,17 @@ def roles(request):
     return render(request, "_content/_roles.html", context)
 
 def photos(request):
+    gallery_index = {}
+    image_path = Path(__file__).resolve().parent.parent.joinpath('static/gallery/')
+
+    for image in image_path.iterdir():
+        #generate a dict with key being directory name and value being list of images name only
+        if image.is_dir():
+            gallery_index[image.name] = [img.name for img in image.iterdir()]
+
     context = {
-        'active': 'photos'
+        'active': 'photos',
+        'gallery_index': gallery_index
     }
     return render(request, "_content/_fotos.html", context)
 
