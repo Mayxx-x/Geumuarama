@@ -1,6 +1,7 @@
 $(document).ready(function() {
     //make a array with galleries that have class gallery
     let galleries = $('.gallery');
+    let placeholder = $('#gallery-placeholder');
     let views = [];
     
     //add galleries to array
@@ -13,6 +14,8 @@ $(document).ready(function() {
     
     //show gallery based on selected selector
     selector.on('change', function() {
+        placeholder.addClass('hidden');
+
         views.forEach(view => view.addClass('hidden'));
 
         selected = selector.val();
