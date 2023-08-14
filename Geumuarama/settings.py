@@ -75,8 +75,11 @@ WSGI_APPLICATION = 'Geumuarama.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        # 'ENGINE': 'django.db.backends.mysql',
+        # 'NAME': 'Mayxx$Fai',
+        # 'HOST': 'localhost',
+        # 'USER': 'Mayxx',
+        # 'PASSWORD': 'RxXx22052002$',
     }
 }
 

@@ -15,7 +15,8 @@ body {
     background: #ffffff1a;
 }
 #scout {
-    background-image: url("../images/scout.jpg");
+    /* background-image: url("../gallery/escoteiros.jpg"); */
     background-size: cover;
     background-attachment: fixed;
+    background-position: left;
 }
